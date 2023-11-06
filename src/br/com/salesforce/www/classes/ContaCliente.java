@@ -1,22 +1,22 @@
 package br.com.salesforce.www.classes;
 
 public class ContaCliente {
-    private String idUsuario;
+    private int idUsuario;
     private String user;
 
     public ContaCliente() {
     }
 
-    public ContaCliente(String idUsuario, String user) {
+    public ContaCliente(int idUsuario, String user) {
         this.idUsuario = idUsuario;
         this.user = user;
     }
 
-    public String getIdUsuario() {
+    public int getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(String idUsuario) {
+    public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
 

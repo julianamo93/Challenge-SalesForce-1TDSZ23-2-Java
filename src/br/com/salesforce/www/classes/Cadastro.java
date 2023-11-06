@@ -1,26 +1,38 @@
 package br.com.salesforce.www.classes;
 
 public class Cadastro {
+    private int id;
     private String nome;
     private String sobrenome;
     private String email;
     private String empresa;
-    private double telefoneContato;
+    private String funcao;
+    private String telefoneContato;
     private String novoUsuario;
-    private Usuario usuario;
+    private Acessibilidade acessibilidade;
 
 
     public Cadastro() {
     }
 
-    public Cadastro(String nome, String sobrenome, String email, String empresa, double telefoneContato, String novoUsuario, Usuario usuario) {
+    public Cadastro(int id, String nome, String sobrenome, String email, String empresa, String funcao, String telefoneContato, String novoUsuario, Acessibilidade acessibilidade, Usuario usuario) {
+        this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
         this.empresa = empresa;
+        this.funcao = funcao;
         this.telefoneContato = telefoneContato;
         this.novoUsuario = novoUsuario;
-        this.usuario = usuario;
+        this.acessibilidade = acessibilidade;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -55,11 +67,19 @@ public class Cadastro {
         this.empresa = empresa;
     }
 
-    public double getTelefoneContato() {
+    public String getFuncao() {
+        return funcao;
+    }
+
+    public void setFuncao(String funcao) {
+        this.funcao = funcao;
+    }
+
+    public String getTelefoneContato() {
         return telefoneContato;
     }
 
-    public void setTelefoneContato(double telefoneContato) {
+    public void setTelefoneContato(String telefoneContato) {
         this.telefoneContato = telefoneContato;
     }
 
@@ -71,12 +91,12 @@ public class Cadastro {
         this.novoUsuario = novoUsuario;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public Acessibilidade getAcessibilidade() {
+        return acessibilidade;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setAcessibilidade(Acessibilidade acessibilidade) {
+        this.acessibilidade = acessibilidade;
     }
 
     public void printCadastro() {
@@ -88,8 +108,15 @@ public class Cadastro {
 
     }
 
-    public void atualizarEmail(String novoEmail) {
-        this.email = novoEmail;
+    public void setUsuario(String usuario) {
     }
+    
+    public void getUsuario(String usuario) {        
+    }
+
+    public Object getUsuario() {
+        return null;
+    }
+
 
 }

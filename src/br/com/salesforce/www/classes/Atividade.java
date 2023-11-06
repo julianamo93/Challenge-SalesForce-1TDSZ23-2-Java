@@ -5,13 +5,13 @@ public class Atividade {
     private String descricao;
     private String data;
     private String hora;
-    private String idUser;
-    private String idUsuarioResponsavel;
+    private int idUser;
+    private int idUsuarioResponsavel;
 
     public Atividade(){
     }
 
-    public Atividade(String tipoAtividade, String descricao, String data, String hora, String idUser, String idUsuarioResponsavel) {
+    public Atividade(String tipoAtividade, String descricao, String data, String hora, int idUser, int idUsuarioResponsavel) {
         this.tipoAtividade = tipoAtividade;
         this.descricao = descricao;
         this.data = data;
@@ -27,7 +27,6 @@ public class Atividade {
     public void setTipoAtividade(String tipoAtividade) {
         this.tipoAtividade = tipoAtividade;
     }
-
     public String getDescricao() {
         return descricao;
     }
@@ -53,19 +52,19 @@ public class Atividade {
 
     }
 
-    public String getIdUsuarioResponsavel() {
+    public int getIdUsuarioResponsavel() {
         return idUsuarioResponsavel;
     }
 
-    public void setIdUsuarioResponsavel(String idUsuarioResponsavel) {
-        this.idUsuarioResponsavel = idUsuarioResponsavel;
+    public void setIdUsuarioResponsavel(int idUsuarioResponsavel) {
+         this.idUsuarioResponsavel = idUsuarioResponsavel;
     }
 
-    public String getIdUser() {
+    public int getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(String idUser) {
+    public void setIdUser(int idUser) {
         this.idUser = idUser;
     }
 

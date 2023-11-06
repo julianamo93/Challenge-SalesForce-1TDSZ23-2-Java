@@ -54,4 +54,8 @@ public class Acessibilidade {
         System.out.println("Browser: " + navegador);
         System.out.println("Localização: " + localizacaoGeografica);
     }
+
+    public void setNavegador() {
+    }
+
 }

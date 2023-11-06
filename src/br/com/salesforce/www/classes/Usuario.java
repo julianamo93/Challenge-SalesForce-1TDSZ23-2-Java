@@ -1,9 +1,7 @@
 package br.com.salesforce.www.classes;
 
-public class Usuario {
-    private String id;
+public class Usuario extends Cadastro {
     private String senha;
-    private String funcao;
     private ContaCliente conta;
     private Atividade atividade;
     private Acessibilidade acessibilidade;
@@ -13,22 +11,12 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String id, String senha, String funcao, ContaCliente conta, Atividade atividade, Acessibilidade acessibilidade, AcessoSistema acesso) {
-        this.id = id;
+    public Usuario(String senha, ContaCliente conta, Atividade atividade, Acessibilidade acessibilidade, AcessoSistema acesso) {
         this.senha = senha;
-        this.funcao = funcao;
         this.conta = conta;
         this.atividade = atividade;
         this.acessibilidade = acessibilidade;
         this.acesso = acesso;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getSenha() {
@@ -37,14 +25,6 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public String getFuncao() {
-        return funcao;
-    }
-
-    public void setFuncao(String funcao) {
-        this.funcao = funcao;
     }
 
     public ContaCliente getConta() {
@@ -71,6 +51,11 @@ public class Usuario {
         this.acessibilidade = acessibilidade;
     }
 
+    @Override
+    public void getUsuario(String usuario) {
+        super.getUsuario(usuario);
+    }
+
     public AcessoSistema getAcesso() {
         return acesso;
     }
@@ -80,10 +65,9 @@ public class Usuario {
     }
 
     public void printInfoUsuario() {
-        System.out.println("ID: " + id);
-        System.out.println("Senha: " + id);
-        System.out.println("Função: " + funcao);
+        System.out.println("ID: " + getId());
+        System.out.println("Senha: " + getSenha());
+        System.out.println("Função: " + getFuncao());
     }
-
 
 }
