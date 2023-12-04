@@ -1,5 +1,7 @@
 package br.com.salesforce.www.classes;
 
+import java.util.Random;
+
 public class Cadastro {
     private int id;
     private String nome;
@@ -8,23 +10,24 @@ public class Cadastro {
     private String empresa;
     private String funcao;
     private String telefoneContato;
-    private String novoUsuario;
-    private Acessibilidade acessibilidade;
+    private String nomeUsuario;
+    private String senha;
 
 
-    public Cadastro() {
+    public Cadastro(){
+        this.id = gerarId();
     }
 
-    public Cadastro(int id, String nome, String sobrenome, String email, String empresa, String funcao, String telefoneContato, String novoUsuario, Acessibilidade acessibilidade, Usuario usuario) {
-        this.id = id;
+    public Cadastro(String nome, String sobrenome, String email, String empresa, String funcao, String telefoneContato, String nomeUsuario, String senha) {
+        this.id = gerarId();
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
         this.empresa = empresa;
         this.funcao = funcao;
         this.telefoneContato = telefoneContato;
-        this.novoUsuario = novoUsuario;
-        this.acessibilidade = acessibilidade;
+        this.nomeUsuario = nomeUsuario;
+        this.senha = senha;
     }
 
     public int getId() {
@@ -33,6 +36,11 @@ public class Cadastro {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    private int gerarId() {
+        Random rand = new Random();
+        return rand.nextInt(9000) + 1000; // Gera um número aleatório entre 1000 e 9999
     }
 
     public String getNome() {
@@ -75,48 +83,31 @@ public class Cadastro {
         this.funcao = funcao;
     }
 
-    public String getTelefoneContato() {
-        return telefoneContato;
-    }
-
     public void setTelefoneContato(String telefoneContato) {
         this.telefoneContato = telefoneContato;
     }
 
-    public String getNovoUsuario() {
-        return novoUsuario;
+    public String getTelefoneContato() {
+        return telefoneContato;
     }
 
-    public void setNovoUsuario(String novoUsuario) {
-        this.novoUsuario = novoUsuario;
+    public String getNomeUsuario() {
+        return nomeUsuario;
     }
 
-    public Acessibilidade getAcessibilidade() {
-        return acessibilidade;
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
     }
 
-    public void setAcessibilidade(Acessibilidade acessibilidade) {
-        this.acessibilidade = acessibilidade;
+    public String getSenha() {
+        return senha;
     }
 
-    public void printCadastro() {
-        System.out.println("Nome completo: " + nome + sobrenome);
-        System.out.println("E-mail: " + email);
-        System.out.println("Empresa: " + empresa);
-        System.out.println("Telefone: " + telefoneContato);
-        System.out.println("Usuário: " + novoUsuario);
-
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public void setUsuario(String usuario) {
+    public String getMenuAcessibilidade(){
+        return getMenuAcessibilidade();
     }
-    
-    public void getUsuario(String usuario) {        
-    }
-
-    public Object getUsuario() {
-        return null;
-    }
-
-
 }

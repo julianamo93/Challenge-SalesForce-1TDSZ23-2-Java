@@ -1,35 +1,34 @@
 package br.com.salesforce.www.classes;
 
-public class Acessibilidade {
-    private String ferramentaAcessibilidade;
-    private String tipoDeDispositivo;
+public class Acessibilidade extends Cadastro {
+    private String menuAcessibilidade;
+    private String tipoDispositivo;
     private String navegador;
-    private String localizacaoGeografica;
 
     public Acessibilidade() {
     }
 
-    public Acessibilidade(String ferramentaAcessibilidade, String tipoDeDispositivo, String navegador, String localizacaoGeografica) {
-        this.ferramentaAcessibilidade = ferramentaAcessibilidade;
-        this.tipoDeDispositivo = tipoDeDispositivo;
+    public Acessibilidade(String menuAcessibilidade, String tipoDispositivo, String navegador) {
+        this.menuAcessibilidade = menuAcessibilidade;
+        this.tipoDispositivo = tipoDispositivo;
         this.navegador = navegador;
-        this.localizacaoGeografica = localizacaoGeografica;
     }
 
-    public void setFerramentaAcessibilidade(String ferramentaAcessibilidade) {
-        this.ferramentaAcessibilidade = ferramentaAcessibilidade;
+    @Override
+    public String getMenuAcessibilidade() {
+        return menuAcessibilidade;
     }
 
-    public String getFerramentaAcessibilidade() {
-        return ferramentaAcessibilidade;
+    public void setMenuAcessibilidade(String menuAcessibilidade) {
+        this.menuAcessibilidade = menuAcessibilidade;
     }
 
-    public String getTipoDeDispositivo() {
-        return tipoDeDispositivo;
+    public String getTipoDispositivo() {
+        return tipoDispositivo;
     }
 
-    public void setTipoDeDispositivo(String tipoDeDispositivo) {
-        this.tipoDeDispositivo = tipoDeDispositivo;
+    public void setTipoDispositivo(String tipoDispositivo) {
+        this.tipoDispositivo = tipoDispositivo;
     }
 
     public String getNavegador() {
@@ -40,22 +39,12 @@ public class Acessibilidade {
         this.navegador = navegador;
     }
 
-    public String getLocalizacaoGeografica() {
-        return localizacaoGeografica;
-    }
-
-    public void setLocalizacaoGeografica(String localizacaoGeografica) {
-        this.localizacaoGeografica = localizacaoGeografica;
-    }
-
-    public void printAcessibilidade() {
-        System.out.println("Ferramenta escolhida: " + ferramentaAcessibilidade);
-        System.out.println("Dispositivo de acesso: " + tipoDeDispositivo);
-        System.out.println("Browser: " + navegador);
-        System.out.println("Localização: " + localizacaoGeografica);
-    }
-
     public void setNavegador() {
+    }
+
+    public void exibeMenuAcessibilidade() {
+        System.out.println("Acessibilidade: " + getMenuAcessibilidade());
+
     }
 
 }

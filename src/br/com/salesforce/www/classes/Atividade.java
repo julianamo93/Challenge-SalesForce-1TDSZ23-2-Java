@@ -1,23 +1,21 @@
 package br.com.salesforce.www.classes;
 
-public class Atividade {
+public class Atividade extends Usuario {
     private String tipoAtividade;
     private String descricao;
     private String data;
     private String hora;
-    private int idUser;
-    private int idUsuarioResponsavel;
+    private String localizacaoGeo;
 
-    public Atividade(){
+    public Atividade() {
     }
 
-    public Atividade(String tipoAtividade, String descricao, String data, String hora, int idUser, int idUsuarioResponsavel) {
+    public Atividade(String tipoAtividade, String descricao, String data, String hora, String localizacaoGeo) {
         this.tipoAtividade = tipoAtividade;
         this.descricao = descricao;
         this.data = data;
         this.hora = hora;
-        this.idUser = idUser;
-        this.idUsuarioResponsavel = idUsuarioResponsavel;
+        this.localizacaoGeo = localizacaoGeo;
     }
 
     public String getTipoAtividade() {
@@ -27,6 +25,7 @@ public class Atividade {
     public void setTipoAtividade(String tipoAtividade) {
         this.tipoAtividade = tipoAtividade;
     }
+
     public String getDescricao() {
         return descricao;
     }
@@ -49,23 +48,14 @@ public class Atividade {
 
     public void setHora(String hora) {
         this.hora = hora;
-
     }
 
-    public int getIdUsuarioResponsavel() {
-        return idUsuarioResponsavel;
+    public String getLocalizacaoGeo() {
+        return localizacaoGeo;
     }
 
-    public void setIdUsuarioResponsavel(int idUsuarioResponsavel) {
-         this.idUsuarioResponsavel = idUsuarioResponsavel;
-    }
-
-    public int getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+    public void setLocalizacaoGeo(String localizacaoGeo) {
+        this.localizacaoGeo = localizacaoGeo;
     }
 
     public void printAtividade() {
@@ -73,7 +63,6 @@ public class Atividade {
         System.out.println("Descrição da atividade: " + descricao);
         System.out.println("Data: " + data);
         System.out.println("Horário: " + hora);
-        System.out.println("ID e Usuário: " + idUser);
-        System.out.println("ID Proprietário: " + idUsuarioResponsavel);
+        System.out.println("ID e Usuário: " + getId() + getLogin());
     }
 }
